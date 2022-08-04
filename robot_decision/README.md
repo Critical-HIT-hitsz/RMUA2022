@@ -81,24 +81,12 @@ robot_decision
 
 ---
 
-## 4. 仿真环境
-去年基于Pygame搭建的仿真平台
-
-![simulation_old](./assets/simulation_old.png)
-
-今年基于OPENCV搭建的仿真平台
-
-![simulation_new](./assets/simulation_new.png)
-
-对于决策模块，强化学习需要千百万次的训练，无论是从时间上还是从损耗上看，实际的机器人都是不可能支撑如此大量的实战训练的。因此比赛模拟环境的搭建是必然的。
-
-我们在去年搭建的比赛模拟环境上进行改进，基于opencv进行可视化效果的展示，同时实现了两种对战模式。一种模式为全自动形式，四台模拟机器人分别自行决策、运动与射击；另一种模式为人机对战模式，实现鼠标点击控制红方2号机器人运动并自行射击，其余三台机器人仍自行决策、运动与射击。仿真界面如下图所示。
-
-相关图片、模拟器内仿真视频和队内模拟赛演示视频在网盘中，可自行观看。
-
-网盘链接：[https://pan.baidu.com/s/1tJFHQz7n4rUoEM1BvWM4Fg](https://pan.baidu.com/s/1tJFHQz7n4rUoEM1BvWM4Fg)，提取码：84wc。
+## 4. 依赖
+决策模块于`robot_base`节点、`robot_planning`节点、`robot_localization`节点和`robot_msgs`节点。
 
 ---
 
-## 5. 依赖
-决策模块于`robot_base`节点、`robot_planning`节点、`robot_localization`节点和`robot_msgs`节点。
+## 5. 网盘资料
+相关图片、模拟器内仿真视频和队内模拟赛演示视频在网盘中，可自行观看。
+
+网盘链接：[https://pan.baidu.com/s/1tJFHQz7n4rUoEM1BvWM4Fg](https://pan.baidu.com/s/1tJFHQz7n4rUoEM1BvWM4Fg)，提取码：84wc。
