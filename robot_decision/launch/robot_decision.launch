@@ -1,0 +1,38 @@
+<launch>
+
+    <node pkg="robot_decision" type="robot_decision" name="robot_decision" output="screen">
+        <remap from="game_status"            to="/referee/game_status"/>
+        <remap from="game_result"            to="/referee/game_result"/>
+        <remap from="game_robot_HP"          to="/referee/game_robot_HP"/>
+        <remap from="game_buff"              to="/referee/game_buff"/>
+        <remap from="robot_status"           to="/referee/robot_status"/>
+        <remap from="robot_damage"           to="/referee/robot_damage"/>
+        <remap from="odometer"               to="/imu_odom"/>
+        <remap from="armor_detection_info"   to="/armor_detection"/>
+        <remap from="wireless_sentry_recv"   to="/wireless/sentry_recv"/>
+        <remap from="self_info"              to="/wireless/self_msg"/>
+        <remap from="gimbal_angle_info"      to="/gimbal/gimbal_angle_info"/>
+        <remap from="team_info"              to="/wireless/team_msg"/>
+        <remap from="planning_info"          to="/robot_planning/obstacle_flag"/>
+        <remap from="reach"                  to="/robot_planning/reach"/>
+        <remap from="goal"                   to="/robot_planning/goal"/>
+        <remap from="buff"                   to="/robot_decision/buff"/>
+        <remap from="team_path"              to="/wireless/team_path"/>
+        
+
+        <param name="decision_visualize_flag_" value="true"/>
+        <param name="fight_mode" value="1"/>
+        <param name="loop_rate" value="10"/>
+        <param name="go_buff_time" value="12"/>
+        <param name="force_add_blood" value="0.25"/>
+        <param name="force_add_bullet" value="10"/>
+        <param name="search_points" value="16"/>
+        <param name="fight_distance" value="1.8"/>
+        <param name="back_distance" value="1.25"/>
+        <param name="attack_distance" value="2.0"/>
+        <param name="force_attack_distance" value="2.5"/>
+        <param name="avoid_encircle" value="1.5"/>
+
+        
+    </node>
+</launch>

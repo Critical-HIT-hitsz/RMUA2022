@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>robot_decision</name>
+  <version>0.0.0</version>
+  <description>The robot_decision package</description>
+
+  <maintainer email="icra_red@todo.todo">icra_red</maintainer>
+
+  <license>TODO</license>
+
+  <buildtool_depend>catkin</buildtool_depend>
+  <build_depend>robot_msgs</build_depend>
+  <!-- <build_depend>robot_localization</build_depend> -->
+
+  <!-- The export tag contains other, unspecified, tags -->
+  <export>
+    <!-- Other tools can request additional information be placed here -->
+
+  </export>
+</package>
