@@ -1,0 +1,26 @@
+<launch>
+  <!--机器人ID号，用于区分相机内参-->
+  <param name="robot_id" value="1"/>
+  <param name="robot_version" value="rmua"/>
+
+  <!--装甲识别参数-->
+  <param name="enemy_color" value="blue"/>
+  <param name="enable_debug" value="true"/>
+  <param name="light_min_angle" value="60.0"/>
+  <param name="light_max_angle_diff" value="20.0"/>
+  <param name="light_aspect_ratio" value="1.0"/>
+  <param name="armor_max_angle" value="25.0"/>
+  <param name="armor_max_aspect_ratio" value="3.0"/>
+  <param name="armor_min_aspect_ratio" value="1.2"/>
+  <param name="blue_threshold" value="100"/>
+  <param name="red_threshold" value="45"/>
+  <param name="red_brightness_threshold" value="35"/>
+  <param name="blue_brightness_threshold" value="55"/>
+  <!--弹道模型参数-->
+  <param name="gimbal_offset_x" value="0.0"/>
+  <param name="gimbal_offset_y" value="119.5"/>
+  <param name="gimbal_offset_z" value="153.0"/>
+  <param name="bullet_init_v" value="20.0"/>
+  <param name="bullet_init_k" value="0.001"/>
+  <node name="robot_detection" pkg="robot_detection" type="robot_detection"/>
+</launch>

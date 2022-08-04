@@ -10,5 +10,6 @@ RMUA2021战队技术答辩视频链接：[RoboMaster 2021高校人工智能挑�
 ## 文件结构
 |文件夹名称|功能|
 |:--|:--|
-|robot_sentry|哨岗识别算法|
-
+|robot_sentry|哨岗识别模块|
+|robot_decision|决策模块|
+|robot_detection|装甲识别模块|
