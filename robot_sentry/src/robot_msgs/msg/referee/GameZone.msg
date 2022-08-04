@@ -1,0 +1,10 @@
+#game zone
+uint8 RED_HP_RECOVERY=1
+uint8 RED_BULLET_SUPPLY=2
+uint8 BLUE_HP_RECOVERY=3
+uint8 BLUE_BULLET_SUPPLY=4
+uint8 DISABLE_SHOOTING=5
+uint8 DISABLE_MOVEMENT=6
+
+uint8 type
+bool active

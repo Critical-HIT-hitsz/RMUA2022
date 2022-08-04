@@ -1,0 +1,4 @@
+<launch>
+    <param name="color_flag" value="2"/>
+    <node pkg="tools" type="homography" name="homography" output="screen"/>
+</launch>

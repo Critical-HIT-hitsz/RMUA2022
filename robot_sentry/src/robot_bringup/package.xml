@@ -1,0 +1,25 @@
+<package>
+    <name>robot_bringup</name>
+    <version>1.0.0</version>
+    <description>
+        The robot_bringup package provides quick bringup for RoboMaster AI Robot
+    </description>
+    <author>RoboMaster</author>
+    <maintainer email="robomaster@dji.com">RoboMaster</maintainer>
+    <license>GPL 3.0 </license>
+    <url>https://github.com/RoboMaster/RoboRTS</url>
+
+    <buildtool_depend>catkin</buildtool_depend>
+
+    <build_depend>robot_base</build_depend>
+    <build_depend>robot_planning</build_depend>
+    <build_depend>robot_localization</build_depend>
+
+    <run_depend>robot_base</run_depend>
+    <run_depend>robot_planning</run_depend>
+    <run_depend>robot_localization</run_depend>
+
+    <export>
+    </export>
+
+</package>

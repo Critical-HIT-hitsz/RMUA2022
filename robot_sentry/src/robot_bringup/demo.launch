@@ -1,0 +1,8 @@
+<launch>
+    <param name="color_flag" value="2"/> 
+    <param name="visualize_Yolo"       value="true"/>
+    <param name="visualize_TrackMap"       value="true"/>
+    <param name="visualize_Origin"       value="true"/>
+    <param name="Ouput_TrackMsg"       value="false"/>
+    <node pkg="sentry_beta" type="sentry_beta_node" name="sentry_beta_node" output="screen"/>
+</launch>
