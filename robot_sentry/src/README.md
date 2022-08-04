@@ -7,7 +7,7 @@
 │  ├─ CMakeLists.txt
 │  ├─ model                 # Tensorrt 模型
 │  ├─ background.png        # 场地背景图
-│  ├─ libtensorrt_pro.so    # tensorRT_pro 静态库
+│  ├─ libtensorrt_pro.so    # tensorRT_pro 静态库（仓库中没有，需要编译，见README）
 │  ├─ sentry_node.cpp       # 哨岗检测节点主程序
 │  ├─ sort                  # 哨岗目标检测与目标跟踪代码库
 │  │  ├─ Hungarian.cpp      # 匈牙利算法
