@@ -1,0 +1,5 @@
+<launch>
+    <node name="robot_detector_node" pkg="omni_detect" type="robot_detector_node" output="screen"> 
+        <rosparam command="load" file="$(find omni_detect)/config/robot_detector.yaml"/>
+    </node>
+</launch>

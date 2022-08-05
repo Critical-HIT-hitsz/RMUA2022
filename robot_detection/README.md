@@ -189,9 +189,11 @@ robot_detection
 单独运行测试：进入工作空间，运行节点，播放rosbag
 
 ```bash
-source devel/setup.bash
 catkin_make
+source devel/setup.bash
 roslaunch robot_detection robot_detection.launch
 rosbag play test.bag
 ```
 
+## 4、网盘链接
+网盘中提供了用于演示功能的rosbag。链接：[https://pan.baidu.com/s/1EDhP30KD0Ao7wxOlbpj_VQ](https://pan.baidu.com/s/1EDhP30KD0Ao7wxOlbpj_VQ?pwd=ft9k)，提取码：ft9k。
