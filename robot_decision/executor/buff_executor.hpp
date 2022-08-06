@@ -10,7 +10,7 @@ class Buff_executor
     typedef std::shared_ptr<Buff_executor> Ptr;
     Buff_executor()
     {
-        buff_pub_ = nh_.advertise<robot_msgs::GameBuff>("buff", 1);
+        buff_pub_ = nh_.advertise<robot_msgs::GameBuff>("self_game_buff", 1);
     }
     ~Buff_executor(){}
     void reset()
@@ -27,7 +27,8 @@ class Buff_executor
             std::cout << "buff error" << std::endl;
             return;
         }
-        buff_state_[id] = state;
+        buff_state_[id
+        ] = state;
     }
     void update()
     {
@@ -41,7 +42,7 @@ class Buff_executor
     private:
     ros::NodeHandle nh_;
     ros::Publisher buff_pub_;
-    bool buff_state_[6];        // true: cannot go through
+    bool buff_state_[6];
 };
 
 #endif

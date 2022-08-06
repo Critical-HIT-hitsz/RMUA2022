@@ -15,8 +15,10 @@
 #include "patrol.hpp"
 #include "retreat.hpp"
 #include "support_teammate.hpp"
+#include "sentry.hpp"
+#include "self_info_executor.hpp"
+#include "buff_executor.hpp"
 #include "log_executor.hpp"
-#include "global_map.hpp"
 #include <thread>
 
 namespace robot_decision
@@ -43,7 +45,7 @@ namespace robot_decision
         Buff_executor::Ptr buff_exe_;
         Log_executor::Ptr log_exe_;
         bool visualize_flag_;
-        // cv::Mat map_;
+        cv::Mat map_;
         std::thread decision_thread_;
         bool decision_thread_running_;
         int loop_rate_;

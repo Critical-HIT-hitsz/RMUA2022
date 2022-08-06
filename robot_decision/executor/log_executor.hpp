@@ -20,13 +20,13 @@ class Log_executor
         tt = tt + 8*3600;  // transform the time zone
         tm* t= gmtime( &tt );
         char str[30];
-        // sprintf(str, "/log/%d-%02d-%02d %02d:%02d:%02d.txt",
-        //         t->tm_year + 1900,
-        //         t->tm_mon + 1,
-        //         t->tm_mday,
-        //         t->tm_hour,
-        //         t->tm_min,
-        //         t->tm_sec);
+        sprintf(str, "/log/%d-%02d-%02d %02d:%02d:%02d.txt",
+                t->tm_year + 1900,
+                t->tm_mon + 1,
+                t->tm_mday,
+                t->tm_hour,
+                t->tm_min,
+                t->tm_sec);
         // outFile = std::ofstream(ros::package::getPath("robot_decision") + str, std::ios_base::out);
         // if(outFile.is_open())
         // {
@@ -40,8 +40,8 @@ class Log_executor
     ~Log_executor(){}
     void print(std::stringstream& str_stream)
     {
-        // if(!create_) return;
-        // // std::cout << str_stream.str() << std::endl;
+        if(!create_) return;
+        // std::cout << str_stream.str() << std::endl;
         // outFile << str_stream.str() << std::endl;
     }
     private:

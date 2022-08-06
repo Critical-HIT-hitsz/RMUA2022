@@ -1,4 +1,4 @@
-# Critical HIT ICRA2021 决策模块
+# Critical HIT RMUA 决策模块
 ## 1.文件结构
 ```bash
 robot_decision
@@ -8,10 +8,10 @@ robot_decision
 │   ├── add_bullet.hpp                 # 加弹
 │   ├── attack_enemy.hpp               # 根据装甲识别选定进攻点
 │   ├── game_start.hpp                 # 判断比赛是否开始
-│   ├── global_map.hpp                 # 小地图进攻
 │   ├── leave_buff.hpp                 # buff刷新前10秒离开buff
 │   ├── patrol.hpp                     # 巡逻
 │   ├── retreat.hpp                    # 没弹没血撤退
+│   ├── sentry.hpp                     # 根据哨岗的数据选定进攻点
 │   └── support_teammate.hpp           # 支援队友，根据队友识别的敌方数据选定进攻点
 ├── executor                           # 云台数据处理模块
 │   ├── buff_executor.hpp              # 发指令给robot_planning控制buff区是否能去
@@ -23,9 +23,9 @@ robot_decision
 ├── blackboard.hpp                     # 黑板，所有数据从黑板读取
 ├── decision_node.cpp                  # 决策节点主函数
 ├── decision_node.hpp
+├── map.pgm                            # 可视化地图
 └── package.xml
 ```
-
 ---
 ## 2. 代码说明
 
@@ -52,12 +52,6 @@ robot_decision
 此节点由来判断是否需要加弹以及给出需要加弹时要去的位置。加弹行为在不同的时间段会有些不同，在比赛刚开始时，自己除加弹外，还有刷掉敌人加血区、阻挡敌方机器人加弹等，最高效率利用比赛刚开始时双方子弹都不足的这段时间。之后buff刷新后，己方机器人只有在己方子弹数不足的情况下采取加弹。
 ### 4. retreat
 此节点用来撤退。当自己状态较差且无法回血回弹时，在四个启动区中选择距离其他机器人都较远的一个作为撤退点。将四个启动区作为预选撤退点，我们通过机器学习训练出来的。
-### 5. global_map
-小地图进攻。通过小地图发送的信息，两车分别去到合适的位置以达成围攻同时防止被对方绕后，在此处有较为简陋的被绕后时的躲避行为（可继续改进）。
-
-![simulation_old](./assets/new_attack_model_1.png)
-
-![simulation_old](./assets/new_attack_model_2.png)
 ### 5. attack_enemy
 此节点用来寻找进攻敌方机器人的最优位置坐标。首先通过相机找到敌方机器人的装甲板位置并通过解算变换到全局坐标系，然后在敌方机器人的坐标周围给出一定数量的预选点，在这些预选点中筛调不可去的点如在场地外或惩罚buff区的点，再选择离自己最近的点。该选点模型图像表示如下图
 ![attack_model](./assets/attack_model.jpg)
@@ -79,6 +73,7 @@ robot_decision
 ## 3. 配合
 我们使用自制的无限模块进行两台机器人之间的通信，保证能够在比赛中实时接收到队友血量、剩余子弹数、要去的buff区等信息，以便打出更好的配合战。
 
+
 ---
 
 ## 4. 依赖
@@ -89,4 +84,13 @@ robot_decision
 ## 5. 网盘资料
 相关图片、模拟器内仿真视频和队内模拟赛演示视频在网盘中，可自行观看。
 
-网盘链接：[https://pan.baidu.com/s/1tJFHQz7n4rUoEM1BvWM4Fg](https://pan.baidu.com/s/1tJFHQz7n4rUoEM1BvWM4Fg)，提取码：84wc。
+网盘连接：
+https://pan.baidu.com/s/1tJFHQz7n4rUoEM1BvWM4Fg
+
+提取码：
+84wc
+
+
+
+---
+日期：2022年7月4日

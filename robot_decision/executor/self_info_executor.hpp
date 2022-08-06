@@ -16,7 +16,7 @@ class Self_Info_executor
     void reset()
     {
         attack_enemy_ = 0;
-        being_attacked_ = 1;
+        being_attacked_ = 4;
         to_buff_ = 6;
         pose_x_ = 0;
         pose_y_ = 0;
@@ -27,13 +27,9 @@ class Self_Info_executor
     {
         attack_enemy_ = id;
     }
-    // void Being_Attacked(uint8_t armor)
-    // {
-    //     being_attacked_ = armor;
-    // }
-    void set_team_mode(uint8_t team_mode)
+    void Being_Attacked(uint8_t armor)
     {
-        being_attacked_ = team_mode;
+        being_attacked_ = armor;
     }
     void Goto_Buff(uint8_t buff)
     {
@@ -57,7 +53,6 @@ class Self_Info_executor
         self_info.to_buff = to_buff_;
         self_info.pose_x_teammate = pose_x_;
         self_info.pose_y_teammate = pose_y_;
-        // self_info.pose_yaw_teammate = pose_z_;
         self_info.pose_x_enemy = pose_x_enemy_;
         self_info.pose_y_enemy = pose_y_enemy_;
         self_info_pub_.publish(self_info);
@@ -70,7 +65,6 @@ class Self_Info_executor
     uint8_t to_buff_;
     uint16_t pose_x_;
     uint16_t pose_y_;
-    float pose_z_;
     uint16_t pose_x_enemy_;
     uint16_t pose_y_enemy_;
 };

@@ -10,7 +10,7 @@
 
   <buildtool_depend>catkin</buildtool_depend>
   <build_depend>robot_msgs</build_depend>
-  <!-- <build_depend>robot_localization</build_depend> -->
+
 
   <!-- The export tag contains other, unspecified, tags -->
   <export>
