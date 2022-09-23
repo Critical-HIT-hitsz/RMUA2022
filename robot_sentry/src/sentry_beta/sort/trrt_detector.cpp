@@ -336,7 +336,7 @@ void trrt_detector::infer(cv::Mat &img,int sentry_id,std::vector<YoloBox>&infer_
     input->resize_single_dim(0, max_batch_size).to_gpu();  
     int ibatch = 0;
     float mean[] = {0,0,0};
-    float std[] = {0,0,0};
+    float std[] = {1.0,1.0,1.0};
     input->set_norm_mat(ibatch, src_img, mean, std);
     engine->forward(true);
 
